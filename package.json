@@ -64,7 +64,8 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@expo/metro-config": "~0.20.14",
+    "@expo/metro-config": "54.0.9",
+    "@expo/metro": "54.1.0",
     "@expo/metro-runtime": "~5.0.4",
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
@@ -92,5 +93,16 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "zod": "^4.1.13"
+  },
+  "pnpm": {
+    "overrides": {
+      "@expo/metro-config": "54.0.9",
+      "@expo/metro": "54.1.0",
+      "metro": "0.82.5",
+      "metro-core": "0.82.5",
+      "metro-config": "0.82.5",
+      "metro-transform-worker": "0.82.5",
+      "metro-resolver": "0.82.5"
+    }
   }
 }
