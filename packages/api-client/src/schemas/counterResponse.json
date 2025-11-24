@@ -1,0 +1,1 @@
+{"type":"object","properties":{"count":{"type":"number"},"timestamp":{"type":"string","format":"date-time"}},"x-readme-ref-name":"CounterResponse"}

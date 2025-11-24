@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: Counter API
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+paths:
+  /counter:
+    get:
+      operationId: getCounter
+      tags:
+        - counter
+      responses:
+        '200':
+          description: Current counter value
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CounterResponse'
+  /counter/increment:
+    post:
+      operationId: incrementCounter
+      tags:
+        - counter
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCounter'
+      responses:
+        '200':
+          description: Counter incremented
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CounterResponse'
+  /counter/decrement:
+    post:
+      operationId: decrementCounter
+      tags:
+        - counter
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCounter'
+      responses:
+        '200':
+          description: Counter decremented
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CounterResponse'
+  /counter/reset:
+    delete:
+      operationId: resetCounter
+      tags:
+        - counter
+      responses:
+        '200':
+          description: Counter reset
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CounterResponse'
+components:
+  schemas:
+    CounterResponse:
+      type: object
+      properties:
+        count:
+          type: number
+        timestamp:
+          type: string
+          format: date-time
+    UpdateCounter:
+      type: object
+      properties:
+        increment:
+          type: number

@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/api-e2e"
+    },
+    {
+      "path": "./apps/api"
+    },
+    {
+      "path": "./packages/types"
+    },
+    {
+      "path": "./packages/api-client"
+    },
+    {
+      "path": "./apps/web"
+    },
+    {
+      "path": "./apps/mobile"
+    }
+  ]
+}

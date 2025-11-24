@@ -1,0 +1,44 @@
+{
+  "name": "@counter-monorepo/api-client",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@counter-monorepo/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "nx": {
+    "sourceRoot": "packages/api-client/src",
+    "targets": {
+      "build": {
+        "executor": "@nx/js:swc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "packages/api-client/dist",
+          "main": "packages/api-client/src/index.ts",
+          "tsConfig": "packages/api-client/tsconfig.lib.json",
+          "skipTypeCheck": true,
+          "stripLeadingPaths": true
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@swc/helpers": "~0.5.11",
+    "axios": "^1.13.2",
+    "zod": "^4.1.13"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.90.10"
+  }
+}

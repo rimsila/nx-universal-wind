@@ -1,0 +1,13 @@
+{
+  "name": "@counter-monorepo/web",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "next": "~16.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@counter-monorepo/types": "workspace:*",
+    "@counter-monorepo/api-client": "workspace:*",
+    "@tanstack/react-query": "^5.90.10"
+  }
+}

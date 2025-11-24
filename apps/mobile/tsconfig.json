@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [
+    "nativewind-env.d.ts"
+  ],
+  "references": [
+    {
+      "path": "../../packages/api-client"
+    },
+    {
+      "path": "../../packages/types"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}
