@@ -19,6 +19,12 @@
       "types": "./dist/counter-ui-native.d.ts",
       "import": "./dist/counter-ui-native.js",
       "default": "./dist/counter-ui-native.js"
+    },
+    "./counter-ui-web": {
+      "@counter-monorepo/source": "./src/counter-ui-web.tsx",
+      "types": "./dist/counter-ui-web.d.ts",
+      "import": "./dist/counter-ui-web.js",
+      "default": "./dist/counter-ui-web.js"
     }
   },
   "nx": {

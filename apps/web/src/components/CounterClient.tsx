@@ -1,6 +1,6 @@
 "use client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { CounterUI } from "@counter-monorepo/types";
+import { CounterUI } from "@counter-monorepo/types/counter-ui-web";
 import {
   useGetCounter,
   useIncrementCounter,
